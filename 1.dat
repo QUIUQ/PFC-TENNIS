@@ -1,0 +1,137 @@
+; =========================
+; PFC2D simple tennis rally
+; two rackets + ball + net
+; stop condition + random velocity
+; =========================
+
+model new
+model large-strain on
+model domain extent -2 14 -1 6
+model gravity 0 -9.81
+
+; -------------------------
+; random seed
+; 改这个数字，每次轨迹会不一样
+; -------------------------
+fish define init_random
+    global vx0 = 4.5 + 2.0 * math.random.uniform
+    global vy0 = 2.5 + 2.0 * math.random.uniform
+end
+@init_random
+
+; -------------------------
+; ball
+; -------------------------
+ball create id 1 radius 0.15 position 2 1.5
+ball attribute density 60 damp 0.005
+ball attribute velocity [vx0] [vy0]
+
+; -------------------------
+; contact model
+; -------------------------
+contact cmat default model linear method deformability emod 1e6 kratio 1.5
+contact cmat default property fric 0.05
+
+; -------------------------
+; ground
+; -------------------------
+wall create id 1 vertices -2 0 14 0
+
+; net
+wall create id 2 vertices 6 0 6 1.1
+
+; left racket
+wall create id 3 vertices 1 0.5 1 2.8
+
+; right racket
+wall create id 4 vertices 11 0.5 11 2.8
+
+; -------------------------
+; racket control
+; -------------------------
+fish define racket_motion
+    local bx = ball.pos.x(ball.find(1))
+
+    ; stop rackets first
+    wall.vel.x(wall.find(3)) = 0.0
+    wall.vel.y(wall.find(3)) = 0.0
+    wall.vel.x(wall.find(4)) = 0.0
+    wall.vel.y(wall.find(4)) = 0.0
+
+    ; left racket hits ball to the right
+    if bx < 2.0 then
+        wall.vel.x(wall.find(3)) = 8.0
+        wall.vel.y(wall.find(3)) = 1.5
+    endif
+
+    ; right racket hits ball to the left
+    if bx > 10.0 then
+        wall.vel.x(wall.find(4)) = -8.0
+        wall.vel.y(wall.find(4)) = 1.5
+    endif
+end
+
+fish callback add racket_motion -1.0
+
+; -------------------------
+; stop condition
+; 碰到左右边界、撞网、掉到底部附近就停止
+; -------------------------
+fish define check_stop
+    global stop_flag
+
+    local bx = ball.pos.x(ball.find(1))
+    local by = ball.pos.y(ball.find(1))
+
+    stop_flag = 0
+
+    ; left boundary
+    if bx < -1.8 then
+        stop_flag = 1
+    endif
+
+    ; right boundary
+    if bx > 13.8 then
+        stop_flag = 1
+    endif
+
+    ; bottom boundary
+    if by < 0.15 then
+        stop_flag = 1
+    endif
+
+    ; hit net
+    if bx > 5.85 then
+        if bx < 6.15 then
+            if by < 1.25 then
+                stop_flag = 1
+            endif
+        endif
+    endif
+end
+
+; -------------------------
+; slow animation loop
+; -------------------------
+fish define slow_run
+    global stop_flag = 0
+    local i = 0
+
+    loop while i < 3000
+
+        command
+            model cycle 50
+        endcommand
+
+        check_stop
+
+        if stop_flag = 1 then
+            i = 3000
+        endif
+
+        i = i + 1
+
+    endloop
+end
+
+@slow_run

@@ -1,0 +1,1483 @@
+{
+    "Header" : {
+        "Type" : "ITASCA PROJECT FILE" ,
+        "Name" : "pfc2d" ,
+        "Major Version" : 9 ,
+        "Minor Version" : 6 ,
+        "Revision" : 46 ,
+        "Source" : "d8a8fbd61b" ,
+        "Binary" : false ,
+        "DateTime" : "2026-04-28T16:20:49" ,
+        "Format" : 0 ,
+        "Dimension" : 2 
+    },
+    "GuiModuleList" : [ 
+        {
+            "Name" : "Terminal" ,
+            "Entry" : {
+                "SaveFile" : "" ,
+                "Kernel" : {
+                    "LoadCommands" : [  ],
+                    "ModuleList" : {
+                        "Modules" : [  ]
+                    },
+                    "ProjectRanges" : {
+                        "SelfIndex" : 0 ,
+                        "State1" : 0 ,
+                        "State2" : 0 ,
+                        "Contents" : [  ]
+                    }
+                },
+                "SaveFiles" : {
+                    "Files" : [  ]
+                },
+                "ResultFiles" : {
+                    "Files" : [  ]
+                }
+            }
+        }, 
+        {
+            "Name" : "DFN" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "Editor" ,
+            "Entry" : {
+                "DataFiles" : {
+                    "Files" : [ 
+                        "1.dat" 
+                    ]
+                },
+                "OpenFiles" : [  ]
+            }
+        }, 
+        {
+            "Name" : "Extruder" ,
+            "Entry" : {
+                "SnapAngleIncrement" : 1.500000000000000e+01 ,
+                "DefaultEdgeType" : "simple" 
+            }
+        }, 
+        {
+            "Name" : "GUIGeometry" ,
+            "Entry" : {
+                "SetList" : {
+                    "Files" : [  ]
+                }
+            }
+        }, 
+        {
+            "Name" : "GuiPythonModule" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "ItascaModel" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "MPMModule" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "PFCModule" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "PFCThermalModule" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "Plot" ,
+            "Entry" : {
+                "ProjState" : [ 
+                    
+                    {
+                        "First" : "Plot01" ,
+                        "Second" : true 
+                    }
+                ],
+                "AddToProj" : false ,
+                "DefaultPage" : {
+                    "AutoUpdate" : true ,
+                    "Outline" : {
+                        "Active" : true ,
+                        "Enabled" : true ,
+                        "Width" : 2 ,
+                        "Style" : 1 ,
+                        "Color" : "#000000FF" ,
+                        "Bool" : true 
+                    },
+                    "Background" : "#ffffffFF" ,
+                    "Active" : true ,
+                    "Legend" : {
+                        "Active" : true ,
+                        "Placement" : 0 ,
+                        "TargetSize" : {
+                            "Width" : 25 ,
+                            "Height" : 50 
+                        },
+                        "Position" : {
+                            "X" : 66 ,
+                            "Y" : 40 
+                        },
+                        "Title" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 1 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : true ,
+                            "Text" : "" 
+                        },
+                        "Caption" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : true ,
+                            "Text" : "" 
+                        },
+                        "Heading" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 80 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 1 ,
+                            "TxColor" : "#6633ffFF" ,
+                            "Bool" : true ,
+                            "Text" : "" 
+                        },
+                        "Copyright" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 28 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#6633ffFF" ,
+                            "Bool" : true ,
+                            "Text" : "" 
+                        },
+                        "Step" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : false ,
+                            "Text" : "" 
+                        },
+                        "Time" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : false ,
+                            "Text" : "" 
+                        },
+                        "Customer" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : false ,
+                            "Text" : "" 
+                        },
+                        "View" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : false ,
+                            "Text" : "" 
+                        },
+                        "ModelTime" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : false ,
+                            "Text" : "" 
+                        },
+                        "ViewDip" : false 
+                    },
+                    "Movie" : false ,
+                    "NextMovieIndex" : 1 ,
+                    "JobTitle" : {
+                        "Active" : true ,
+                        "Enabled" : true ,
+                        "TxSize" : 12 ,
+                        "TxFamily" : "Segoe UI" ,
+                        "TxStyle" : 0 ,
+                        "TxColor" : "#000000FF" ,
+                        "Bool" : false ,
+                        "Text" : "" 
+                    },
+                    "ViewTitle" : {
+                        "Active" : true ,
+                        "Enabled" : true ,
+                        "TxSize" : 12 ,
+                        "TxFamily" : "Segoe UI" ,
+                        "TxStyle" : 0 ,
+                        "TxColor" : "#000000FF" ,
+                        "Bool" : false ,
+                        "Text" : "Plot Title" 
+                    },
+                    "Target" : true 
+                },
+                "GlobalDefault" : {
+                    "Inter1" : {
+                        "Active" : true ,
+                        "Enabled" : true ,
+                        "Width" : 3 ,
+                        "Style" : 1 ,
+                        "Color" : "#ff0000FF" ,
+                        "Bool" : true 
+                    },
+                    "Inter2" : {
+                        "Active" : true ,
+                        "Enabled" : true ,
+                        "Width" : 2 ,
+                        "Style" : 1 ,
+                        "Color" : "#000000FF" ,
+                        "Bool" : true 
+                    },
+                    "Picking" : true ,
+                    "Sketch" : true ,
+                    "UpdateInterval" : 100 ,
+                    "PrintSize" : {
+                        "Width" : 1650 ,
+                        "Height" : 1238 
+                    },
+                    "MovieInterval" : 1000 ,
+                    "MovieExtension" : "png" ,
+                    "MovieSize" : {
+                        "Width" : 1024 ,
+                        "Height" : 768 
+                    },
+                    "MoviePrefix" : "movie_" ,
+                    "DXFWarning" : true ,
+                    "MaxLabels" : 1024000 
+                },
+                "ColorRamps" : {
+                    "ColorRamps" : [  ]
+                },
+                "Plots" : [ 
+                    {
+                        "View" : {
+                            "Locked" : false ,
+                            "ModelExtent" :  { "X1" : -2.000000000000000e+00  , "X2" : 1.400000000000000e+01  , "Y1" : -1.000000000000000e+00  , "Y2" : 6.000000000000000e+00 } ,
+                            "ViewExtent" :  { "X1" : -5.755020993196742e+00  , "X2" : 1.807284099244707e+01  , "Y1" : -8.651122205734161e+00  , "Y2" : 1.517673977990965e+01 } ,
+                            "FirstViewAuto" : false ,
+                            "SyncToName" : "Unsynced" 
+                        },
+                        "Properties" : {
+                            "AutoUpdate" : true ,
+                            "Outline" : {
+                                "Active" : true ,
+                                "Enabled" : true ,
+                                "Width" : 2 ,
+                                "Style" : 1 ,
+                                "Color" : "#000000FF" ,
+                                "Bool" : true 
+                            },
+                            "Background" : "#ffffffFF" ,
+                            "Active" : true ,
+                            "Legend" : {
+                                "Active" : true ,
+                                "Placement" : 0 ,
+                                "TargetSize" : {
+                                    "Width" : 25 ,
+                                    "Height" : 50 
+                                },
+                                "Position" : {
+                                    "X" : 66 ,
+                                    "Y" : 40 
+                                },
+                                "Title" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "TxSize" : 40 ,
+                                    "TxFamily" : "Segoe UI" ,
+                                    "TxStyle" : 1 ,
+                                    "TxColor" : "#000000FF" ,
+                                    "Bool" : true ,
+                                    "Text" : "" 
+                                },
+                                "Caption" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "TxSize" : 40 ,
+                                    "TxFamily" : "Segoe UI" ,
+                                    "TxStyle" : 0 ,
+                                    "TxColor" : "#000000FF" ,
+                                    "Bool" : true ,
+                                    "Text" : "" 
+                                },
+                                "Heading" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "TxSize" : 80 ,
+                                    "TxFamily" : "Segoe UI" ,
+                                    "TxStyle" : 1 ,
+                                    "TxColor" : "#6633ffFF" ,
+                                    "Bool" : true ,
+                                    "Text" : "" 
+                                },
+                                "Copyright" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "TxSize" : 28 ,
+                                    "TxFamily" : "Segoe UI" ,
+                                    "TxStyle" : 0 ,
+                                    "TxColor" : "#6633ffFF" ,
+                                    "Bool" : true ,
+                                    "Text" : "" 
+                                },
+                                "Step" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "TxSize" : 40 ,
+                                    "TxFamily" : "Segoe UI" ,
+                                    "TxStyle" : 0 ,
+                                    "TxColor" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "Time" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "TxSize" : 40 ,
+                                    "TxFamily" : "Segoe UI" ,
+                                    "TxStyle" : 0 ,
+                                    "TxColor" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "Customer" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "TxSize" : 40 ,
+                                    "TxFamily" : "Segoe UI" ,
+                                    "TxStyle" : 0 ,
+                                    "TxColor" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "View" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "TxSize" : 40 ,
+                                    "TxFamily" : "Segoe UI" ,
+                                    "TxStyle" : 0 ,
+                                    "TxColor" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "ModelTime" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "TxSize" : 40 ,
+                                    "TxFamily" : "Segoe UI" ,
+                                    "TxStyle" : 0 ,
+                                    "TxColor" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "ViewDip" : false 
+                            },
+                            "Movie" : false ,
+                            "NextMovieIndex" : 1 ,
+                            "JobTitle" : {
+                                "Active" : true ,
+                                "Enabled" : true ,
+                                "TxSize" : 12 ,
+                                "TxFamily" : "Segoe UI" ,
+                                "TxStyle" : 0 ,
+                                "TxColor" : "#000000FF" ,
+                                "Bool" : false ,
+                                "Text" : "" 
+                            },
+                            "ViewTitle" : {
+                                "Active" : true ,
+                                "Enabled" : true ,
+                                "TxSize" : 12 ,
+                                "TxFamily" : "Segoe UI" ,
+                                "TxStyle" : 0 ,
+                                "TxColor" : "#000000FF" ,
+                                "Bool" : false ,
+                                "Text" : "Plot Title" 
+                            },
+                            "Target" : true 
+                        },
+                        "PlotItems" : [ 
+                            {
+                                "Name" : "Ball Plot" ,
+                                "Item" : {
+                                    "Active" : true ,
+                                    "Type" : 0 ,
+                                    "PIActive" : true ,
+                                    "ShowCaption" : true ,
+                                    "Title" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "TxSize" : 40 ,
+                                        "TxFamily" : "Segoe UI" ,
+                                        "TxStyle" : 1 ,
+                                        "TxColor" : "#000000FF" ,
+                                        "Bool" : true ,
+                                        "Text" : "" 
+                                    },
+                                    "Transparency" : 70 ,
+                                    "TransActive" : false ,
+                                    "TransLocked" : true ,
+                                    "Range" : [ 
+                                        {
+                                            "Active" : true ,
+                                            "RenderModeSpecific" : true ,
+                                            "ExtentModel" : true ,
+                                            "Type" : 1284443565 ,
+                                            "RangePlotItem" : [  ],
+                                            "Range" : [ 
+                                                {
+                                                    "SelfIndex" : 0 ,
+                                                    "ID" : 0 ,
+                                                    "Name" : "" ,
+                                                    "Union" : false ,
+                                                    "Selected" : false ,
+                                                    "Deselected" : false ,
+                                                    "UseHidden" : false ,
+                                                    "Elements" : [  ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "PropLabelList" : [  ],
+                                    "PropValueList" : [  ],
+                                    "PropVectorList" : [  ],
+                                    "PropTenList" : [  ],
+                                    "AttLabelList" : [ 
+                                        
+                                        {
+                                            "First" : "extra" ,
+                                            "Second" : 0 
+                                        }
+                                        , 
+                                        {
+                                            "First" : "fixity" ,
+                                            "Second" : 0 
+                                        }
+                                        , 
+                                        {
+                                            "First" : "group" ,
+                                            "Second" : 0 
+                                        }
+                                    ],
+                                    "AttValueList" : [ 
+                                        
+                                        {
+                                            "First" : "extra" ,
+                                            "Second" : 0 
+                                        }
+                                    ],
+                                    "AttVectorList" : [ 
+                                        
+                                        {
+                                            "First" : "extra" ,
+                                            "Second" : 0 
+                                        }
+                                    ],
+                                    "AttTenList" : [  ],
+                                    "PropValueNum" : -1 ,
+                                    "PropVectorNum" : -1 ,
+                                    "PropTenNum" : -1 ,
+                                    "PropLabelNum" : -1 ,
+                                    "AttrValueNum" : -1 ,
+                                    "AttrVectorNum" : -1 ,
+                                    "AttrTenNum" : -1 ,
+                                    "AttrLabelNum" : -1 ,
+                                    "VecComponent" : 0 ,
+                                    "TenQuant" : 0 ,
+                                    "ColorList" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Global" : false ,
+                                        "MapSto" : [ 
+                                            {
+                                                "Key" : "Default" ,
+                                                "Value" : {
+                                                    "Array" : [ 
+                                                        
+                                                        {
+                                                            "Color" : "#2e8b56FF" ,
+                                                            "Alias" : "" ,
+                                                            "Label" : "ball" ,
+                                                            "Bool" : true ,
+                                                            "Used2" : true ,
+                                                            "Default" : false 
+                                                        }
+                                                    ],
+                                                    "Index" : false 
+                                                }
+                                            }
+                                        ],
+                                        "Category" : "Default" ,
+                                        "CLabel" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "Heading" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        }
+                                    },
+                                    "Contour" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "RampKeyword" : "rainbow" ,
+                                        "Minimum" : 0.000000000000000e+00 ,
+                                        "Maximum" : 0.000000000000000e+00 ,
+                                        "Interval" : 1.000000000000000e+00 ,
+                                        "MinAuto" : true ,
+                                        "MaxAuto" : true ,
+                                        "IntAuto" : true ,
+                                        "Reversed" : false ,
+                                        "AboveAuto" : true ,
+                                        "BelowAuto" : true ,
+                                        "Above" : "#ff0000FF" ,
+                                        "Below" : "#0000ffFF" ,
+                                        "MaxCaption" : 20 ,
+                                        "Log" : false ,
+                                        "Caption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "Precision" : 2 ,
+                                        "Format" : 2 
+                                    },
+                                    "Scale" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "UsesBool" : false ,
+                                        "UsesScaleAuto" : false ,
+                                        "Target" : 5.000000074505806e-02 ,
+                                        "Scale" : 1.000000000000000e+00 ,
+                                        "ScaleAuto" : false ,
+                                        "Bool" : true 
+                                    },
+                                    "Arrows" : {
+                                        "Active" : true ,
+                                        "ColorByMagnitude" : false ,
+                                        "MagCont" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "RampKeyword" : "rainbow" ,
+                                                "Minimum" : 1.797693134862316e+308 ,
+                                                "Maximum" : -1.797693134862316e+308 ,
+                                                "Interval" : 0.000000000000000e+00 ,
+                                                "MinAuto" : true ,
+                                                "MaxAuto" : true ,
+                                                "IntAuto" : true ,
+                                                "Reversed" : false ,
+                                                "AboveAuto" : true ,
+                                                "BelowAuto" : true ,
+                                                "Above" : "#ff0000FF" ,
+                                                "Below" : "#0000ffFF" ,
+                                                "MaxCaption" : 20 ,
+                                                "Log" : false ,
+                                                "Caption" : {
+                                                    "Active" : true ,
+                                                    "Enabled" : true ,
+                                                    "TxSize" : 40 ,
+                                                    "TxFamily" : "Segoe UI" ,
+                                                    "TxStyle" : 0 ,
+                                                    "TxColor" : "#000000FF" ,
+                                                    "Bool" : true ,
+                                                    "Text" : "" 
+                                                },
+                                                "Precision" : 2 ,
+                                                "Format" : 2 
+                                            }
+                                        ],
+                                        "ColorMap" : [  ],
+                                        "Lines" : {
+                                            "Active" : true ,
+                                            "AttLine" : [ 
+                                                {
+                                                    "Active" : true ,
+                                                    "Enabled" : true ,
+                                                    "Width" : 2 ,
+                                                    "Style" : 1 ,
+                                                    "Color" : "#000000FF" ,
+                                                    "Bool" : true 
+                                                }
+                                            ]
+                                        },
+                                        "MaxCaption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "Caption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "PointToBase" : false ,
+                                        "ArrowHead" : true ,
+                                        "ArrowSize" : {
+                                            "Width" : 30 ,
+                                            "Height" : 20 
+                                        },
+                                        "Scale" : [  ],
+                                        "ColorContour" : [  ],
+                                        "CountText" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "TxSize" : 40 ,
+                                                "TxFamily" : "Segoe UI" ,
+                                                "TxStyle" : 0 ,
+                                                "TxColor" : "#000000FF" ,
+                                                "Bool" : true ,
+                                                "Text" : "" 
+                                            }
+                                        ]
+                                    },
+                                    "LabelExtents" : {
+                                        "Active" : true ,
+                                        "AttLine" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Width" : 1 ,
+                                                "Style" : 1 ,
+                                                "Color" : "#000000FF" ,
+                                                "Bool" : true 
+                                            }
+                                        ],
+                                        "ColorList" : [  ],
+                                        "CountText" : [  ]
+                                    },
+                                    "ContourExtents" : {
+                                        "Active" : true ,
+                                        "AttLine" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Width" : 1 ,
+                                                "Style" : 1 ,
+                                                "Color" : "#000000FF" ,
+                                                "Bool" : true 
+                                            }
+                                        ],
+                                        "Contour" : [  ],
+                                        "CountText" : [  ]
+                                    },
+                                    "ArrowScale" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "UsesBool" : false ,
+                                        "UsesScaleAuto" : true ,
+                                        "Target" : 5.000000074505806e-02 ,
+                                        "Scale" : 1.000000000000000e+00 ,
+                                        "ScaleAuto" : true ,
+                                        "Bool" : true 
+                                    },
+                                    "PlotType" : 0 ,
+                                    "LabelIndex" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Index" : 0 ,
+                                        "PieceName" : "" ,
+                                        "UsePiece" : false 
+                                    },
+                                    "ValueIndex" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Index" : 0 ,
+                                        "PieceName" : "" ,
+                                        "UsePiece" : false 
+                                    },
+                                    "VectorIndex" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Index" : 0 ,
+                                        "PieceName" : "" ,
+                                        "UsePiece" : false 
+                                    },
+                                    "TenIndex" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Index" : 0 ,
+                                        "PieceName" : "" ,
+                                        "UsePiece" : false 
+                                    },
+                                    "GroupSlot" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Slot" : "Any" ,
+                                        "PieceName" : "" ,
+                                        "UsePiece" : false 
+                                    },
+                                    "Map" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Map" : 0 ,
+                                        "Rotate" : { "z" : 0.000000000000000e+00 } ,
+                                        "Translate" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00 } ,
+                                        "Scale" : { "x" : 1.000000000000000e+00  , "y" : 1.000000000000000e+00 } ,
+                                        "Caption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        }
+                                    },
+                                    "Value" : "" ,
+                                    "OtherTool" : true ,
+                                    "CurrentDataType" : 0 ,
+                                    "OtherType" : 4287891654 ,
+                                    "AttrComboName" : "ATTRIBUTE" ,
+                                    "PropComboName" : "PROPERTY" ,
+                                    "MaxLabels" : 1000000 ,
+                                    "AltPlot" : 0 ,
+                                    "OrientEnabled" : false ,
+                                    "LabelControls" : true ,
+                                    "OrientIncluded" : true ,
+                                    "OrientSize" : 10 ,
+                                    "HasProperties" : true ,
+                                    "OrientColor" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Color" : "#000000FF" ,
+                                        "Caption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        }
+                                    },
+                                    "CountText" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "TxSize" : 40 ,
+                                        "TxFamily" : "Segoe UI" ,
+                                        "TxStyle" : 0 ,
+                                        "TxColor" : "#000000FF" ,
+                                        "Bool" : true ,
+                                        "Text" : "" 
+                                    },
+                                    "Normal" : { "x" : 1.000000000000000e+00  , "y" : 0.000000000000000e+00 } ,
+                                    "ScaleByMagnitude" : false ,
+                                    "Both" : false ,
+                                    "UsesBoth" : true ,
+                                    "DrawArrows" : false ,
+                                    "DoProperties" : true ,
+                                    "Ghost" : false ,
+                                    "Spheres" : {
+                                        "Active" : true ,
+                                        "SphereCaption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "DContour" : [  ],
+                                        "Scale" : [  ],
+                                        "ColorMap" : [  ],
+                                        "SizeByPixel" : false ,
+                                        "PixelSize" : 5 ,
+                                        "ColorByContour" : false ,
+                                        "Lighting" : true ,
+                                        "CountLimit" : 1000000 ,
+                                        "Count" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "StrActive" : false ,
+                                        "StrWidth2" : 10 ,
+                                        "StrColor" : "#000000FF" ,
+                                        "DrawAsSphere" : false ,
+                                        "Outline" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Width" : 10 ,
+                                            "Style" : 1 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true 
+                                        }
+                                    }
+                                }
+                            }, 
+                            {
+                                "Name" : "Wall Plot" ,
+                                "Item" : {
+                                    "Active" : true ,
+                                    "Type" : 0 ,
+                                    "PIActive" : true ,
+                                    "ShowCaption" : true ,
+                                    "Title" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "TxSize" : 40 ,
+                                        "TxFamily" : "Segoe UI" ,
+                                        "TxStyle" : 1 ,
+                                        "TxColor" : "#000000FF" ,
+                                        "Bool" : true ,
+                                        "Text" : "" 
+                                    },
+                                    "Transparency" : 70 ,
+                                    "TransActive" : false ,
+                                    "TransLocked" : true ,
+                                    "Range" : [ 
+                                        {
+                                            "Active" : true ,
+                                            "RenderModeSpecific" : true ,
+                                            "ExtentModel" : true ,
+                                            "Type" : 1284541033 ,
+                                            "RangePlotItem" : [  ],
+                                            "Range" : [ 
+                                                {
+                                                    "SelfIndex" : 0 ,
+                                                    "ID" : 0 ,
+                                                    "Name" : "" ,
+                                                    "Union" : false ,
+                                                    "Selected" : false ,
+                                                    "Deselected" : false ,
+                                                    "UseHidden" : false ,
+                                                    "Elements" : [  ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "PropLabelList" : [  ],
+                                    "PropValueList" : [  ],
+                                    "PropVectorList" : [  ],
+                                    "PropTenList" : [  ],
+                                    "AttLabelList" : [ 
+                                        
+                                        {
+                                            "First" : "extra" ,
+                                            "Second" : 0 
+                                        }
+                                        , 
+                                        {
+                                            "First" : "group" ,
+                                            "Second" : 0 
+                                        }
+                                        , 
+                                        {
+                                            "First" : "name" ,
+                                            "Second" : 0 
+                                        }
+                                        , 
+                                        {
+                                            "First" : "facet activity" ,
+                                            "Second" : 0 
+                                        }
+                                    ],
+                                    "AttValueList" : [ 
+                                        
+                                        {
+                                            "First" : "extra" ,
+                                            "Second" : 0 
+                                        }
+                                    ],
+                                    "AttVectorList" : [ 
+                                        
+                                        {
+                                            "First" : "extra" ,
+                                            "Second" : 0 
+                                        }
+                                    ],
+                                    "AttTenList" : [  ],
+                                    "PropValueNum" : -1 ,
+                                    "PropVectorNum" : -1 ,
+                                    "PropTenNum" : -1 ,
+                                    "PropLabelNum" : -1 ,
+                                    "AttrValueNum" : -1 ,
+                                    "AttrVectorNum" : -1 ,
+                                    "AttrTenNum" : -1 ,
+                                    "AttrLabelNum" : -1 ,
+                                    "VecComponent" : 0 ,
+                                    "TenQuant" : 0 ,
+                                    "ColorList" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Global" : false ,
+                                        "MapSto" : [ 
+                                            {
+                                                "Key" : "Default" ,
+                                                "Value" : {
+                                                    "Array" : [ 
+                                                        
+                                                        {
+                                                            "Color" : "#2e8b56FF" ,
+                                                            "Alias" : "" ,
+                                                            "Label" : "facets" ,
+                                                            "Bool" : true ,
+                                                            "Used2" : true ,
+                                                            "Default" : false 
+                                                        }
+                                                    ],
+                                                    "Index" : false 
+                                                }
+                                            }
+                                        ],
+                                        "Category" : "Default" ,
+                                        "CLabel" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "Heading" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        }
+                                    },
+                                    "Contour" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "RampKeyword" : "rainbow" ,
+                                        "Minimum" : 1.797693134862316e+308 ,
+                                        "Maximum" : 1.797693134862316e+308 ,
+                                        "Interval" : 0.000000000000000e+00 ,
+                                        "MinAuto" : true ,
+                                        "MaxAuto" : true ,
+                                        "IntAuto" : true ,
+                                        "Reversed" : false ,
+                                        "AboveAuto" : true ,
+                                        "BelowAuto" : true ,
+                                        "Above" : "#ff0000FF" ,
+                                        "Below" : "#0000ffFF" ,
+                                        "MaxCaption" : 20 ,
+                                        "Log" : false ,
+                                        "Caption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "Precision" : 2 ,
+                                        "Format" : 2 
+                                    },
+                                    "Scale" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "UsesBool" : false ,
+                                        "UsesScaleAuto" : false ,
+                                        "Target" : 5.000000074505806e-02 ,
+                                        "Scale" : 1.000000000000000e+00 ,
+                                        "ScaleAuto" : false ,
+                                        "Bool" : true 
+                                    },
+                                    "Arrows" : {
+                                        "Active" : true ,
+                                        "ColorByMagnitude" : false ,
+                                        "MagCont" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "RampKeyword" : "rainbow" ,
+                                                "Minimum" : 1.797693134862316e+308 ,
+                                                "Maximum" : -1.797693134862316e+308 ,
+                                                "Interval" : 0.000000000000000e+00 ,
+                                                "MinAuto" : true ,
+                                                "MaxAuto" : true ,
+                                                "IntAuto" : true ,
+                                                "Reversed" : false ,
+                                                "AboveAuto" : true ,
+                                                "BelowAuto" : true ,
+                                                "Above" : "#ff0000FF" ,
+                                                "Below" : "#0000ffFF" ,
+                                                "MaxCaption" : 20 ,
+                                                "Log" : false ,
+                                                "Caption" : {
+                                                    "Active" : true ,
+                                                    "Enabled" : true ,
+                                                    "TxSize" : 40 ,
+                                                    "TxFamily" : "Segoe UI" ,
+                                                    "TxStyle" : 0 ,
+                                                    "TxColor" : "#000000FF" ,
+                                                    "Bool" : true ,
+                                                    "Text" : "" 
+                                                },
+                                                "Precision" : 2 ,
+                                                "Format" : 2 
+                                            }
+                                        ],
+                                        "ColorMap" : [  ],
+                                        "Lines" : {
+                                            "Active" : true ,
+                                            "AttLine" : [ 
+                                                {
+                                                    "Active" : true ,
+                                                    "Enabled" : true ,
+                                                    "Width" : 2 ,
+                                                    "Style" : 1 ,
+                                                    "Color" : "#000000FF" ,
+                                                    "Bool" : true 
+                                                }
+                                            ]
+                                        },
+                                        "MaxCaption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "Caption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "PointToBase" : false ,
+                                        "ArrowHead" : true ,
+                                        "ArrowSize" : {
+                                            "Width" : 30 ,
+                                            "Height" : 20 
+                                        },
+                                        "Scale" : [  ],
+                                        "ColorContour" : [  ],
+                                        "CountText" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "TxSize" : 40 ,
+                                                "TxFamily" : "Segoe UI" ,
+                                                "TxStyle" : 0 ,
+                                                "TxColor" : "#000000FF" ,
+                                                "Bool" : true ,
+                                                "Text" : "" 
+                                            }
+                                        ]
+                                    },
+                                    "LabelExtents" : {
+                                        "Active" : true ,
+                                        "AttLine" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Width" : 1 ,
+                                                "Style" : 1 ,
+                                                "Color" : "#000000FF" ,
+                                                "Bool" : true 
+                                            }
+                                        ],
+                                        "ColorList" : [  ],
+                                        "CountText" : [  ]
+                                    },
+                                    "ContourExtents" : {
+                                        "Active" : true ,
+                                        "AttLine" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Width" : 1 ,
+                                                "Style" : 1 ,
+                                                "Color" : "#000000FF" ,
+                                                "Bool" : true 
+                                            }
+                                        ],
+                                        "Contour" : [  ],
+                                        "CountText" : [  ]
+                                    },
+                                    "ArrowScale" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "UsesBool" : false ,
+                                        "UsesScaleAuto" : true ,
+                                        "Target" : 5.000000074505806e-02 ,
+                                        "Scale" : 1.000000000000000e+00 ,
+                                        "ScaleAuto" : true ,
+                                        "Bool" : true 
+                                    },
+                                    "PlotType" : 0 ,
+                                    "LabelIndex" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Index" : 0 ,
+                                        "PieceName" : "Facet" ,
+                                        "UsePiece" : false 
+                                    },
+                                    "ValueIndex" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Index" : 0 ,
+                                        "PieceName" : "Facet" ,
+                                        "UsePiece" : false 
+                                    },
+                                    "VectorIndex" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Index" : 0 ,
+                                        "PieceName" : "Facet" ,
+                                        "UsePiece" : false 
+                                    },
+                                    "TenIndex" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Index" : 0 ,
+                                        "PieceName" : "" ,
+                                        "UsePiece" : false 
+                                    },
+                                    "GroupSlot" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Slot" : "Any" ,
+                                        "PieceName" : "Facet" ,
+                                        "UsePiece" : false 
+                                    },
+                                    "Map" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Map" : 0 ,
+                                        "Rotate" : { "z" : 0.000000000000000e+00 } ,
+                                        "Translate" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00 } ,
+                                        "Scale" : { "x" : 1.000000000000000e+00  , "y" : 1.000000000000000e+00 } ,
+                                        "Caption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        }
+                                    },
+                                    "Value" : "" ,
+                                    "OtherTool" : true ,
+                                    "CurrentDataType" : 0 ,
+                                    "OtherType" : 4287891654 ,
+                                    "AttrComboName" : "ATTRIBUTE" ,
+                                    "PropComboName" : "PROPERTY" ,
+                                    "MaxLabels" : 1000000 ,
+                                    "AltPlot" : 0 ,
+                                    "OrientEnabled" : false ,
+                                    "LabelControls" : true ,
+                                    "OrientIncluded" : false ,
+                                    "OrientSize" : 0 ,
+                                    "HasProperties" : true ,
+                                    "OrientColor" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Color" : "#000000FF" ,
+                                        "Caption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "TxSize" : 40 ,
+                                            "TxFamily" : "Segoe UI" ,
+                                            "TxStyle" : 0 ,
+                                            "TxColor" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        }
+                                    },
+                                    "CountText" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "TxSize" : 40 ,
+                                        "TxFamily" : "Segoe UI" ,
+                                        "TxStyle" : 0 ,
+                                        "TxColor" : "#000000FF" ,
+                                        "Bool" : true ,
+                                        "Text" : "" 
+                                    },
+                                    "Normal" : { "x" : 1.000000000000000e+00  , "y" : 0.000000000000000e+00 } ,
+                                    "ScaleByMagnitude" : false ,
+                                    "Both" : false ,
+                                    "UsesBoth" : false ,
+                                    "DrawArrows" : false ,
+                                    "DoProperties" : true ,
+                                    "Ghost" : false ,
+                                    "ConFac" : {
+                                        "Active" : true ,
+                                        "AttLine" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Width" : 1 ,
+                                                "Style" : 1 ,
+                                                "Color" : "#000000FF" ,
+                                                "Bool" : true 
+                                            }
+                                        ],
+                                        "Contour" : [  ],
+                                        "CountText" : [  ]
+                                    },
+                                    "LabFac" : {
+                                        "Active" : true ,
+                                        "AttLine" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Width" : 1 ,
+                                                "Style" : 1 ,
+                                                "Color" : "#000000FF" ,
+                                                "Bool" : true 
+                                            }
+                                        ],
+                                        "ColorList" : [  ],
+                                        "CountText" : [  ]
+                                    },
+                                    "LabVert" : {
+                                        "Active" : true ,
+                                        "Points" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 6 ,
+                                            "Color" : "#000000FF" 
+                                        },
+                                        "OColorList" : [  ],
+                                        "CountText" : [  ]
+                                    },
+                                    "ConVert" : {
+                                        "Active" : true ,
+                                        "Points" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 6 ,
+                                            "Color" : "#000000FF" 
+                                        },
+                                        "Contour" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "RampKeyword" : "rainbow" ,
+                                            "Minimum" : 1.797693134862316e+308 ,
+                                            "Maximum" : -1.797693134862316e+308 ,
+                                            "Interval" : 0.000000000000000e+00 ,
+                                            "MinAuto" : true ,
+                                            "MaxAuto" : true ,
+                                            "IntAuto" : true ,
+                                            "Reversed" : false ,
+                                            "AboveAuto" : true ,
+                                            "BelowAuto" : true ,
+                                            "Above" : "#ff0000FF" ,
+                                            "Below" : "#0000ffFF" ,
+                                            "MaxCaption" : 20 ,
+                                            "Log" : false ,
+                                            "Caption" : {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "TxSize" : 40 ,
+                                                "TxFamily" : "Segoe UI" ,
+                                                "TxStyle" : 0 ,
+                                                "TxColor" : "#000000FF" ,
+                                                "Bool" : true ,
+                                                "Text" : "" 
+                                            },
+                                            "Precision" : 2 ,
+                                            "Format" : 2 
+                                        },
+                                        "CountText" : [  ]
+                                    },
+                                    "FacOn" : true ,
+                                    "VertOn" : false ,
+                                    "WallOn" : false ,
+                                    "WallC" : [ 
+                                        "wall1" ,
+                                        "wall2" ,
+                                        "wall3" 
+                                    ],
+                                    "WallUC" : [  ]
+                                }
+                            }, 
+                            {
+                                "Name" : "Domain Plot" ,
+                                "Item" : {
+                                    "Active" : true ,
+                                    "Type" : 0 ,
+                                    "PIActive" : true ,
+                                    "ShowCaption" : true ,
+                                    "Title" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "TxSize" : 40 ,
+                                        "TxFamily" : "Segoe UI" ,
+                                        "TxStyle" : 1 ,
+                                        "TxColor" : "#000000FF" ,
+                                        "Bool" : true ,
+                                        "Text" : "" 
+                                    },
+                                    "Transparency" : 70 ,
+                                    "TransActive" : false ,
+                                    "TransLocked" : true ,
+                                    "Range" : [  ]
+                                }
+                            }
+                        ],
+                        "ID" : 1 ,
+                        "Name" : "Plot01" 
+                    }
+                ],
+                "HiddenPlots" : [  ],
+                "HiddenIds" : [  ],
+                "Views" : [  ]
+            }
+        }, 
+        {
+            "Name" : "Project" ,
+            "Entry" : {
+                "useResults" : true ,
+                "movieOutDir" : "" ,
+                "movieXRes" : 1920 ,
+                "movieYRes" : 1080 ,
+                "result2Files" : [  ],
+                "save2Files" : [  ],
+                "plots2" : [  ],
+                "datafile" : "" ,
+                "movieIndex" : 1 ,
+                "template" : "%1_%2" ,
+                "expanded" : [ 
+                    "Project" ,
+                    "Data Files" ,
+                    "Plots" 
+                ],
+                "filtered" : [ 
+                    "Project" ,
+                    "Model State" ,
+                    "Program Settings" ,
+                    "Watch" 
+                ],
+                "watches" : [  ],
+                "objscale" : 1.400000000000000e+00 
+            }
+        }, 
+        {
+            "Name" : "RBlock" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "RBlockThermalModule" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "Zone" ,
+            "Entry" : { }
+        }
+    ],
+    "Terminal" : {
+        "MoveLists" : true ,
+        "LineLimit" : 18 
+    },
+    "ColorMap" : {
+        "EMaps" : [  ]
+    },
+    "Layout3" : {
+        "PaneAction" : [  ],
+        "State" : "AAAA/wAAAAD9AAAAAQAAAAAAAAjpAAAFJ/wCAAAAAfsAAAAaAFcAbwByAGsAcwBwAGEAYwBlAEQAbwBjAGsBAAAAKAAABScAAAFfAP///gAAAAAAAAUnAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAwAE0AYQBpAG4AVwBpAG4AZABvAHcAQwBhAHAAdABpAG8AbgBXAHIAYQBwAHAAZQByAQAAAAD/////AAAAAAAAAAA=" ,
+        "Splitter1" : "AAAA/wAAAAEAAAACAAAA8gAAA+gA/////wEAAAABAA==" ,
+        "Splitter2" : "AAAA/wAAAAEAAAACAAACwAAAAPoA/////wEAAAACAA==" ,
+        "Splitter3" : "AAAA/wAAAAEAAAADAAAGKgAAAPoAAAAYAP////8BAAAAAQA=" ,
+        "Viewer" : {
+            "Info" : [ 
+                
+                {
+                    "Name" : "Viewer-ROOT #2" ,
+                    "Geom" : [ 788 ,788  ],
+                    "Child1" : "Editor_1" ,
+                    "Child2" : "Plot_Plot01" ,
+                    "Hor" : true ,
+                    "Added" : 0 ,
+                    "Ext1" : "dat" ,
+                    "Ext2" : "" 
+                }
+            ],
+            "Focus" : "Editor_1" 
+        },
+        "Recent" : { },
+        "ProjVis" : true ,
+        "ConsVis" : true ,
+        "Splitter4" : "AAAA/wAAAAEAAAACAAACUwAAAPoA/////wEAAAABAA==" ,
+        "PanelVis" : true ,
+        "ViewerVis" : true ,
+        "RightTabs" : [  ],
+        "RightCI" : -1 ,
+        "LeftCI" : 0 
+    },
+    "PaneContents" : { }
+}

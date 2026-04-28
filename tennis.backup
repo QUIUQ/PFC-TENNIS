@@ -1,0 +1,355 @@
+{
+    "Header" : {
+        "Type" : "ITASCA PROJECT FILE" ,
+        "Name" : "pfc2d" ,
+        "Major Version" : 9 ,
+        "Minor Version" : 6 ,
+        "Revision" : 46 ,
+        "Source" : "d8a8fbd61b" ,
+        "Binary" : false ,
+        "DateTime" : "2026-04-28T14:58:08" ,
+        "Format" : 0 ,
+        "Dimension" : 2 
+    },
+    "GuiModuleList" : [ 
+        {
+            "Name" : "Terminal" ,
+            "Entry" : {
+                "SaveFile" : "" ,
+                "Kernel" : {
+                    "LoadCommands" : [  ],
+                    "ModuleList" : {
+                        "Modules" : [  ]
+                    },
+                    "ProjectRanges" : {
+                        "SelfIndex" : 0 ,
+                        "State1" : 0 ,
+                        "State2" : 0 ,
+                        "Contents" : [  ]
+                    }
+                },
+                "SaveFiles" : {
+                    "Files" : [  ]
+                },
+                "ResultFiles" : {
+                    "Files" : [  ]
+                }
+            }
+        }, 
+        {
+            "Name" : "DFN" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "Editor" ,
+            "Entry" : {
+                "DataFiles" : {
+                    "Files" : [  ]
+                },
+                "OpenFiles" : [  ]
+            }
+        }, 
+        {
+            "Name" : "Extruder" ,
+            "Entry" : {
+                "SnapAngleIncrement" : 1.500000000000000e+01 ,
+                "DefaultEdgeType" : "simple" 
+            }
+        }, 
+        {
+            "Name" : "GUIGeometry" ,
+            "Entry" : {
+                "SetList" : {
+                    "Files" : [  ]
+                }
+            }
+        }, 
+        {
+            "Name" : "GuiPythonModule" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "ItascaModel" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "MPMModule" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "PFCModule" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "PFCThermalModule" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "Plot" ,
+            "Entry" : {
+                "ProjState" : [  ],
+                "AddToProj" : false ,
+                "DefaultPage" : {
+                    "AutoUpdate" : true ,
+                    "Outline" : {
+                        "Active" : true ,
+                        "Enabled" : true ,
+                        "Width" : 2 ,
+                        "Style" : 1 ,
+                        "Color" : "#000000FF" ,
+                        "Bool" : true 
+                    },
+                    "Background" : "#ffffffFF" ,
+                    "Active" : true ,
+                    "Legend" : {
+                        "Active" : true ,
+                        "Placement" : 0 ,
+                        "TargetSize" : {
+                            "Width" : 25 ,
+                            "Height" : 50 
+                        },
+                        "Position" : {
+                            "X" : 66 ,
+                            "Y" : 40 
+                        },
+                        "Title" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 1 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : true ,
+                            "Text" : "" 
+                        },
+                        "Caption" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : true ,
+                            "Text" : "" 
+                        },
+                        "Heading" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 80 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 1 ,
+                            "TxColor" : "#6633ffFF" ,
+                            "Bool" : true ,
+                            "Text" : "" 
+                        },
+                        "Copyright" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 28 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#6633ffFF" ,
+                            "Bool" : true ,
+                            "Text" : "" 
+                        },
+                        "Step" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : false ,
+                            "Text" : "" 
+                        },
+                        "Time" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : false ,
+                            "Text" : "" 
+                        },
+                        "Customer" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : false ,
+                            "Text" : "" 
+                        },
+                        "View" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : false ,
+                            "Text" : "" 
+                        },
+                        "ModelTime" : {
+                            "Active" : true ,
+                            "Enabled" : true ,
+                            "TxSize" : 40 ,
+                            "TxFamily" : "Segoe UI" ,
+                            "TxStyle" : 0 ,
+                            "TxColor" : "#000000FF" ,
+                            "Bool" : false ,
+                            "Text" : "" 
+                        },
+                        "ViewDip" : false 
+                    },
+                    "Movie" : false ,
+                    "NextMovieIndex" : 1 ,
+                    "JobTitle" : {
+                        "Active" : true ,
+                        "Enabled" : true ,
+                        "TxSize" : 12 ,
+                        "TxFamily" : "Segoe UI" ,
+                        "TxStyle" : 0 ,
+                        "TxColor" : "#000000FF" ,
+                        "Bool" : false ,
+                        "Text" : "" 
+                    },
+                    "ViewTitle" : {
+                        "Active" : true ,
+                        "Enabled" : true ,
+                        "TxSize" : 12 ,
+                        "TxFamily" : "Segoe UI" ,
+                        "TxStyle" : 0 ,
+                        "TxColor" : "#000000FF" ,
+                        "Bool" : false ,
+                        "Text" : "Plot Title" 
+                    },
+                    "Target" : true 
+                },
+                "GlobalDefault" : {
+                    "Inter1" : {
+                        "Active" : true ,
+                        "Enabled" : true ,
+                        "Width" : 3 ,
+                        "Style" : 1 ,
+                        "Color" : "#ff0000FF" ,
+                        "Bool" : true 
+                    },
+                    "Inter2" : {
+                        "Active" : true ,
+                        "Enabled" : true ,
+                        "Width" : 2 ,
+                        "Style" : 1 ,
+                        "Color" : "#000000FF" ,
+                        "Bool" : true 
+                    },
+                    "Picking" : true ,
+                    "Sketch" : true ,
+                    "UpdateInterval" : 100 ,
+                    "PrintSize" : {
+                        "Width" : 1650 ,
+                        "Height" : 1238 
+                    },
+                    "MovieInterval" : 1000 ,
+                    "MovieExtension" : "png" ,
+                    "MovieSize" : {
+                        "Width" : 1024 ,
+                        "Height" : 768 
+                    },
+                    "MoviePrefix" : "movie_" ,
+                    "DXFWarning" : true ,
+                    "MaxLabels" : 1024000 
+                },
+                "ColorRamps" : {
+                    "ColorRamps" : [  ]
+                },
+                "Plots" : [  ],
+                "HiddenPlots" : [  ],
+                "HiddenIds" : [  ],
+                "Views" : [  ]
+            }
+        }, 
+        {
+            "Name" : "Project" ,
+            "Entry" : {
+                "useResults" : true ,
+                "movieOutDir" : "" ,
+                "movieXRes" : 1920 ,
+                "movieYRes" : 1080 ,
+                "result2Files" : [  ],
+                "save2Files" : [  ],
+                "plots2" : [  ],
+                "datafile" : "" ,
+                "movieIndex" : 1 ,
+                "template" : "%1_%2" ,
+                "expanded" : [ 
+                    "Project" ,
+                    "Data Files" ,
+                    "Plots" 
+                ],
+                "filtered" : [ 
+                    "Project" ,
+                    "Model State" ,
+                    "Program Settings" ,
+                    "Watch" 
+                ],
+                "watches" : [  ],
+                "objscale" : 1.400000000000000e+00 
+            }
+        }, 
+        {
+            "Name" : "RBlock" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "RBlockThermalModule" ,
+            "Entry" : { }
+        }, 
+        {
+            "Name" : "Zone" ,
+            "Entry" : { }
+        }
+    ],
+    "Terminal" : {
+        "MoveLists" : true ,
+        "LineLimit" : 18 
+    },
+    "ColorMap" : {
+        "EMaps" : [  ]
+    },
+    "Layout3" : {
+        "PaneAction" : [  ],
+        "State" : "AAAA/wAAAAD9AAAAAQAAAAAAAAjpAAAFJ/wCAAAAAfsAAAAaAFcAbwByAGsAcwBwAGEAYwBlAEQAbwBjAGsBAAAAKAAABScAAAFGAP///gAAAAAAAAUnAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAwAE0AYQBpAG4AVwBpAG4AZABvAHcAQwBhAHAAdABpAG8AbgBXAHIAYQBwAHAAZQByAQAAAAD/////AAAAAAAAAAA=" ,
+        "Splitter1" : "AAAA/wAAAAEAAAACAAAA8gAAA+gA/////wEAAAABAA==" ,
+        "Splitter2" : "AAAA/wAAAAEAAAACAAACwAAAAPoA/////wEAAAACAA==" ,
+        "Splitter3" : "AAAA/wAAAAEAAAADAAAD6AAAAPoAAAAYAP////8BAAAAAQA=" ,
+        "Viewer" : {
+            "Info" : [ 
+                
+                {
+                    "Name" : "Viewer-ROOT #3" ,
+                    "Geom" : [ 1462  ],
+                    "Child1" : "Placeholder #5 dock" ,
+                    "Child2" : "" ,
+                    "Hor" : true ,
+                    "Added" : -1 ,
+                    "Ext1" : "" ,
+                    "Ext2" : "" 
+                }
+            ],
+            "Focus" : "Placeholder #5 dock" 
+        },
+        "Recent" : { },
+        "ProjVis" : true ,
+        "ConsVis" : true ,
+        "Splitter4" : "AAAA/wAAAAEAAAACAAACUwAAAPoA/////wEAAAABAA==" ,
+        "PanelVis" : true ,
+        "ViewerVis" : true ,
+        "RightTabs" : [  ],
+        "RightCI" : -1 ,
+        "LeftCI" : 0 
+    },
+    "PaneContents" : { }
+}
