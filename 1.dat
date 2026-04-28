@@ -1,6 +1,7 @@
 ; =========================
-; PFC2D tennis: one-bounce then hit
-; 目标：球先在地面弹跳一次，再由右侧球拍击球
+; PFC2D tennis rally advanced demo
+; two rackets + ball + net
+; auto tracking + racket angle + stop condition + random velocity
 ; =========================
 
 model new
@@ -9,18 +10,21 @@ model domain extent -2 14 -1 6
 model gravity 0 -9.81
 
 ; -------------------------
-; random seed: slightly varied initial speed
+; random seed
+; 改这个数字，每次轨迹不同
 ; -------------------------
+model random 12345
+
 fish define init_random
-    global vx0 = 5.5 + 1.5 * math.random.uniform
-    global vy0 = -0.8 - 0.8 * math.random.uniform
+    global vx0 = 5 + 1.5 *  math.random.uniform
+    global vy0 = 2.0 + 1.5 *  math.random.uniform
 end
 @init_random
 
 ; -------------------------
 ; ball
 ; -------------------------
-ball create id 1 radius 0.15 position 2.0 1.8
+ball create id 1 radius 0.15 position 2 1.5
 ball attribute density 60 damp 0.005
 ball attribute velocity [vx0] [vy0]
 
@@ -28,73 +32,144 @@ ball attribute velocity [vx0] [vy0]
 ; contact model
 ; -------------------------
 contact cmat default model linear method deformability emod 1e6 kratio 1.5
-contact cmat default property fric 0.08
+contact cmat default property fric 0.05
 
 ; -------------------------
-; boundaries and objects
+; court
 ; -------------------------
 wall create id 1 vertices -2 0 14 0
+
+; net
 wall create id 2 vertices 6 0 6 1.1
-wall create id 3 vertices 1 0.5 1 2.8
-wall create id 4 vertices 11 0.5 11 2.8
 
-; -------------------------
-; bounce tracking:
-; detect first ground bounce by velocity sign change near ground
-; -------------------------
-fish define init_state
-    global bounce_count = 0
-    global prev_vy = ball.vel.y(ball.find(1))
-    global hit_done = 0
-end
-@init_state
+; left racket, angled
+wall create id 3 vertices 1.0 0.5 1.25 2.8
 
-fish define detect_bounce
-    local by = ball.pos.y(ball.find(1))
-    local vy = ball.vel.y(ball.find(1))
+; right racket, angled
+wall create id 4 vertices 11.0 0.5 10.75 2.8
 
-    ; near ground and vertical velocity turns from down to up => one bounce
-    if bounce_count = 0 then
-        if by < 0.22 then
-            if prev_vy < 0.0 then
-                if vy > 0.0 then
-                    bounce_count = 1
-                endif
-            endif
-        endif
-    endif
+; =========================================================
+; Racket motion with height tracking + swing + racket angle
+; =========================================================
 
-    prev_vy = vy
-end
-
-; -------------------------
-; racket control
-; only hit after the first bounce
-; -------------------------
 fish define racket_motion
-    local bx = ball.pos.x(ball.find(1))
 
-    ; stop rackets by default
-    wall.vel.x(wall.find(3)) = 0.0
-    wall.vel.y(wall.find(3)) = 0.0
-    wall.vel.x(wall.find(4)) = 0.0
-    wall.vel.y(wall.find(4)) = 0.0
+    ; -------------------------
+    ; get ball and rackets
+    ; -------------------------
+    local b  = ball.find(1)
+    local wl = wall.find(3)   ; left racket
+    local wr = wall.find(4)   ; right racket
 
-    ; keep left racket passive in this scenario
+    local bx = ball.pos.x(b)
+    local by = ball.pos.y(b)
 
-    ; right racket hits only after one bounce and ball arrives near racket zone
-    if bounce_count >= 1 then
-        if bx > 9.8 then
-            if hit_done = 0 then
-                wall.vel.x(wall.find(4)) = -9.0
-                wall.vel.y(wall.find(4)) = 1.8
-                hit_done = 1
-            endif
+    ; -------------------------
+    ; reset racket velocities
+    ; -------------------------
+    wall.vel.x(wl) = 0.0
+    wall.vel.y(wl) = 0.0
+    wall.vel.x(wr) = 0.0
+    wall.vel.y(wr) = 0.0
+
+    ; -------------------------
+    ; parameters
+    ; -------------------------
+    local target_y = 1.5
+    local dead_zone = 0.25
+    local track_speed = 2.0
+
+    local swing_speed_x = 8.0
+    local swing_y = 0.0
+
+    ; racket angle, degree
+    ; positive angle = open racket / lift ball
+    ; negative angle = closed racket / press ball
+    local angle = 0.0
+
+    ; -------------------------
+    ; height tracking
+    ; -------------------------
+    if by > target_y + dead_zone then
+        wall.vel.y(wl) = track_speed
+        wall.vel.y(wr) = track_speed
+    endif
+
+    if by < target_y - dead_zone then
+        wall.vel.y(wl) = -track_speed
+        wall.vel.y(wr) = -track_speed
+    endif
+
+    ; -------------------------
+    ; racket angle decision
+    ; -------------------------
+    if by < 0.5 then
+        angle = 45.0
+        swing_y = 4.0
+    endif
+
+    if by >= 0.7 then
+        if by < 1.5 then
+            angle = 15.0
+            swing_y = 2.0
         endif
     endif
+
+    if by >= 0.9 then
+        if by < 1.9 then
+            angle = 0.0
+            swing_y = 0.5
+        endif
+    endif
+
+    if by >= 1.2 then
+        angle = -45.0
+        swing_y = -1.0
+    endif
+
+    ; -------------------------
+    ; left racket swing
+    ; ball near left side
+    ; -------------------------
+    if bx < 14.0 then
+
+        ; move racket to hit ball
+        wall.vel.x(wl) = swing_speed_x
+        wall.vel.y(wl) = swing_y
+
+        ; set racket angle
+        ; if this line reports error, tell me your PFC version
+        wall.rotation(wl) = angle
+
+    else
+
+        ; reset angle when not hitting
+        wall.rotation(wl) =angle
+
+    endif
+
+    ; -------------------------
+    ; right racket swing
+    ; ball near right side
+    ; -------------------------
+    if bx > 10.0 then
+
+        ; move racket to hit ball
+        wall.vel.x(wr) = -swing_speed_x
+        wall.vel.y(wr) = swing_y
+
+        ; right side should be mirrored
+        wall.rotation(wr) = -angle
+
+    else
+
+        ; reset angle when not hitting
+        wall.rotation(wr) = angle
+
+    endif
+
 end
 
-fish callback add detect_bounce -1.0
 fish callback add racket_motion -1.0
 
 ; -------------------------
@@ -108,19 +183,18 @@ fish define check_stop
 
     stop_flag = 0
 
-    ; side boundaries
+    ; out of left/right court
     if bx < -1.8 then
         stop_flag = 1
     endif
+
     if bx > 13.8 then
         stop_flag = 1
     endif
 
-    ; too close to bottom after the bounce-hit sequence
-    if by < 0.12 then
-        if bounce_count >= 1 then
-            stop_flag = 1
-        endif
+    ; too low, ball failed
+    if by < 0.15 then
+        stop_flag = 1
     endif
 
     ; hit net
@@ -134,22 +208,22 @@ fish define check_stop
 end
 
 ; -------------------------
-; slow animation loop
+; slow run loop
 ; -------------------------
 fish define slow_run
     global stop_flag = 0
     local i = 0
 
-    loop while i < 3500
+    loop while i < 3000
 
         command
-            model cycle 40
+            model cycle 20
         endcommand
 
         check_stop
 
         if stop_flag = 1 then
-            i = 3500
+            i = 3000
         endif
 
         i = i + 1
