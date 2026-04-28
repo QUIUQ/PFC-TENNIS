@@ -1,7 +1,6 @@
 ; =========================
-; PFC2D simple tennis rally
-; two rackets + ball + net
-; stop condition + random velocity
+; PFC2D tennis: one-bounce then hit
+; 目标：球先在地面弹跳一次，再由右侧球拍击球
 ; =========================
 
 model new
@@ -10,19 +9,18 @@ model domain extent -2 14 -1 6
 model gravity 0 -9.81
 
 ; -------------------------
-; random seed
-; 改这个数字，每次轨迹会不一样
+; random seed: slightly varied initial speed
 ; -------------------------
 fish define init_random
-    global vx0 = 4.5 + 2.0 * math.random.uniform
-    global vy0 = 2.5 + 2.0 * math.random.uniform
+    global vx0 = 5.5 + 1.5 * math.random.uniform
+    global vy0 = -0.8 - 0.8 * math.random.uniform
 end
 @init_random
 
 ; -------------------------
 ; ball
 ; -------------------------
-ball create id 1 radius 0.15 position 2 1.5
+ball create id 1 radius 0.15 position 2.0 1.8
 ball attribute density 60 damp 0.005
 ball attribute velocity [vx0] [vy0]
 
@@ -30,52 +28,77 @@ ball attribute velocity [vx0] [vy0]
 ; contact model
 ; -------------------------
 contact cmat default model linear method deformability emod 1e6 kratio 1.5
-contact cmat default property fric 0.05
+contact cmat default property fric 0.08
 
 ; -------------------------
-; ground
+; boundaries and objects
 ; -------------------------
 wall create id 1 vertices -2 0 14 0
-
-; net
 wall create id 2 vertices 6 0 6 1.1
-
-; left racket
 wall create id 3 vertices 1 0.5 1 2.8
-
-; right racket
 wall create id 4 vertices 11 0.5 11 2.8
 
 ; -------------------------
+; bounce tracking:
+; detect first ground bounce by velocity sign change near ground
+; -------------------------
+fish define init_state
+    global bounce_count = 0
+    global prev_vy = ball.vel.y(ball.find(1))
+    global hit_done = 0
+end
+@init_state
+
+fish define detect_bounce
+    local by = ball.pos.y(ball.find(1))
+    local vy = ball.vel.y(ball.find(1))
+
+    ; near ground and vertical velocity turns from down to up => one bounce
+    if bounce_count = 0 then
+        if by < 0.22 then
+            if prev_vy < 0.0 then
+                if vy > 0.0 then
+                    bounce_count = 1
+                endif
+            endif
+        endif
+    endif
+
+    prev_vy = vy
+end
+
+; -------------------------
 ; racket control
+; only hit after the first bounce
 ; -------------------------
 fish define racket_motion
     local bx = ball.pos.x(ball.find(1))
 
-    ; stop rackets first
+    ; stop rackets by default
     wall.vel.x(wall.find(3)) = 0.0
     wall.vel.y(wall.find(3)) = 0.0
     wall.vel.x(wall.find(4)) = 0.0
     wall.vel.y(wall.find(4)) = 0.0
 
-    ; left racket hits ball to the right
-    if bx < 2.0 then
-        wall.vel.x(wall.find(3)) = 8.0
-        wall.vel.y(wall.find(3)) = 1.5
-    endif
+    ; keep left racket passive in this scenario
 
-    ; right racket hits ball to the left
-    if bx > 10.0 then
-        wall.vel.x(wall.find(4)) = -8.0
-        wall.vel.y(wall.find(4)) = 1.5
+    ; right racket hits only after one bounce and ball arrives near racket zone
+    if bounce_count >= 1 then
+        if bx > 9.8 then
+            if hit_done = 0 then
+                wall.vel.x(wall.find(4)) = -9.0
+                wall.vel.y(wall.find(4)) = 1.8
+                hit_done = 1
+            endif
+        endif
     endif
 end
 
+fish callback add detect_bounce -1.0
 fish callback add racket_motion -1.0
 
 ; -------------------------
 ; stop condition
-; 碰到左右边界、撞网、掉到底部附近就停止
 ; -------------------------
 fish define check_stop
     global stop_flag
@@ -85,19 +108,19 @@ fish define check_stop
 
     stop_flag = 0
 
-    ; left boundary
+    ; side boundaries
     if bx < -1.8 then
         stop_flag = 1
     endif
-
-    ; right boundary
     if bx > 13.8 then
         stop_flag = 1
     endif
 
-    ; bottom boundary
-    if by < 0.15 then
-        stop_flag = 1
+    ; too close to bottom after the bounce-hit sequence
+    if by < 0.12 then
+        if bounce_count >= 1 then
+            stop_flag = 1
+        endif
     endif
 
     ; hit net
@@ -117,16 +140,16 @@ fish define slow_run
     global stop_flag = 0
     local i = 0
 
-    loop while i < 3000
+    loop while i < 3500
 
         command
-            model cycle 50
+            model cycle 40
         endcommand
 
         check_stop
 
         if stop_flag = 1 then
-            i = 3000
+            i = 3500
         endif
 
         i = i + 1
